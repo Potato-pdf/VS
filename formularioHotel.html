@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Hotel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Reserva de Hotel</h1>
+        <form id="reservationForm">
+            <div class="form-group">
+                <label for="hotel">Seleccione el hotel</label>
+                <select class="form-control" id="hotel" required>
+                    <option value="Riviera Maya">Riviera Maya</option>
+                    <option value="Maya Beach">Maya Beach</option>
+                    <option value="Maya Palace">Maya Palace</option>
+                    <option value="Allegro Playacar">Allegro Playacar</option>
+                    <option value="Occidental at Xcaret">Occidental at Xcaret</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="roomType">Seleccione el tipo de habitación</label>
+                <select class="form-control" id="roomType" required>
+                    <option value="Estándar">Estándar</option>
+                    <option value="Vista al mar">Vista al mar</option>
+                    <option value="Delux">Delux</option>
+                    <option value="Royal Level Luxury">Royal Level Luxury</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="numGuests">Número de huéspedes</label>
+                <input type="number" class="form-control" id="numGuests" min="1" required>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="allInclusive">
+                <label class="form-check-label" for="allInclusive">Todo incluido</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Calcular</button>
+        </form>
+        
+        <div class="mt-5">
+            <h2 class="text-center">Resultado de la Reserva</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Hotel</th>
+                        <th scope="col">Tipo de Habitación</th>
+                        <th scope="col">Huéspedes</th>
+                        <th scope="col">Todo Incluido</th>
+                        <th scope="col">Costo Total</th>
+                    </tr>
+                </thead>
+                <tbody id="reservationResult">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

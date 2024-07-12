@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cálculo de CURP con Datos Adicionales</title>
+<link rel="stylesheet" href="curp.css">
+</head>
+<body>
+<div class="container">
+  <h1>Cálculo de CURP con Datos Adicionales</h1>
+  <form id="curpForm">
+    <div class="form-group">
+      <label for="nombre">Nombre(s):</label>
+      <input type="text" id="nombre" required>
+    </div>
+    <div class="form-group">
+      <label for="apellidoPaterno">Apellido Paterno:</label>
+      <input type="text" id="apellidoPaterno" required>
+    </div>
+    <div class="form-group">
+      <label for="apellidoMaterno">Apellido Materno:</label>
+      <input type="text" id="apellidoMaterno" required>
+    </div>
+    <div class="form-group">
+      <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+      <input type="date" id="fechaNacimiento" required>
+    </div>
+    <div class="form-group">
+      <label for="genero">Género:</label>
+      <select id="genero" required>
+        <option value="H">Hombre</option>
+        <option value="M">Mujer</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="estado">Estado:</label>
+      <select id="estado" required>
+      
+        <option value="AS">Aguascalientes</option>
+        <option value="BC">Baja California</option>
+        <option value="GTO">Guanajuato</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="municipio">Municipio o Delegación:</label>
+      <input type="text" id="municipio" required>
+    </div>
+    <button type="button" onclick="calcularCURP()">Calcular CURP</button>
+  </form>
+  <div id="resultado"></div>
+</div>
+
+<script src="curp.js"></script>
+</body>
+</html>
+
